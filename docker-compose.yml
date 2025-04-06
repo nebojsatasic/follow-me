@@ -9,7 +9,7 @@ services:
     working_dir: /var/www
     volumes:
       - ./src:/var/www
-    command: sh -c "php artisan migrate"
+    command: sh -c "php artisan migrate && php-fpm"
     networks:
       - follow_me
 
