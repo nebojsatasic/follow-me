@@ -1,4 +1,5 @@
 # Follow Me
+
 ## Introduction
 
 Follow Me is a social media web application built with Laravel, offering an Instagram-like experience. The platform enables users to create profiles, share photos, interact through posts, and connect with others through a follow system.
@@ -51,4 +52,4 @@ Email: [nele.tasic@gmail.com](mailto:nele.tasic@gmail.com)
 
 Website: [https://nebojsatasic.com](https://nebojsatasic.com)
 
-Feel free to reach out if you need admin login details or any other information.
+Feel free to reach out if you need login details or any other information.
