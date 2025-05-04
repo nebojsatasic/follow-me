@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: follow_me_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/var/www
+    networks:
+      - follow_me
+
+  nginx:
+    container_name: follow_me_nginx
+    image: nginx:alpine
+    ports:
+      - "82:80"
+    volumes:
+      - ./src:/var/www
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - follow_me
+
+networks:
+  follow_me:
+    name: follow_me
+    driver: bridge
